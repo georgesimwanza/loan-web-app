@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Logo at the very top -->
+    <div class="logo-area">
+        <img src="images/images.png" alt="Company Logo" class="logo-img">
+    </div>
+
+    <!-- Navbar under the logo -->
+    <header class="navbar">
+        <div class="menu-icon">☰</div>
+        <nav class="nav-links">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </nav>
+        <div class="profile-icon">👤</div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-container">
+        <main class="main-layout">
+
+            <!-- Big Loan Status Box (Main Content) -->
+            <div class="loan-status-box">
+                <div class="loan-status-header">
+                    <h1 class="loan-status-title">Loan Status</h1>
+                    <div class="loan-status-badge">Active</div>
+                </div>
+
+                <div class="loan-info-grid">
+                    <div class="loan-info-card">
+                        <h3>Current Balance</h3>
+                        <div class="amount">K1,34,061</div>
+                    </div>
+                    <div class="loan-info-card">
+                        <h3>Monthly EMI</h3>
+                        <div class="amount">K2,777.77</div>
+                    </div>
+                    <div class="loan-info-card">
+                        <h3>Next Due Date</h3>
+                        <div class="amount">05/08/2024</div>
+                    </div>
+                </div>
+
+                <div class="loan-progress">
+                    <div class="progress-header">
+                        <span class="progress-label">Repayment Progress</span>
+                        <span class="progress-percentage">40%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+                <div class="loan-actions">
+                    <button class="action-btn btn-primary">Make Payment</button>
+                    <button class="action-btn btn-secondary">View Statement</button>
+                    <button class="action-btn btn-secondary">Request Increase</button>
+                </div>
+            </div>
+
+            <!-- Loan Card on the far right -->
+            <aside class="loan-card">
+                <div class="account-info">
+                    <p>Account No: 6521 0060 4890 5861 <span class="status active">Active</span></p>
+                </div>
+
+                <div class="loan-details">
+                    <div>
+                        <p>Loan Amount</p>
+                        <h3>K1,34,061</h3>
+                    </div>
+                    <div>
+                        <p>Interest Rate</p>
+                        <h3>9.25%</h3>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <input type="range" min="0" max="100" value="40" class="slider" />
+                </div>
+
+                <div class="emi">
+                    <p>Monthly EMI</p>
+                    <h3>K2,777.77</h3>
+                </div>
+
+                <div class="due">
+                    <p>Next Due Date: <strong>05/08/2024</strong></p>
+                </div>
+
+                <button class="pay-btn">Pay Now</button>
+            </aside>
+
+            <!-- Services Section -->
+            <section class="services">
+                <div class="service-card">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="get loan">
+                    <p>get a loan</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="repay loan">
+                    <p>repay loan</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/services.png" alt="services">
+                    <p>check our services</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/settings.png" alt="reviews">
+                    <p>reviews</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <footer>
+        <!-- Top Section -->
+        <div class="top-footer">
+            <div class="brand">
+                <h2>We growing up your business<br>with personal AI manager.</h2>
+                <p>Maxwell, 2023.</p>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Plans & Pricing</a></li>
+                    <li><a href="#">Personal AI Manager</a></li>
+                    <li><a href="#">AI Business Writer</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Papers</a></li>
+                    <li><a href="#">Press Conferences</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Green Strip -->
+        <div class="green-strip">
+            © 2025 Zed homes Inc. All rights reserved. | <a href="#" style="color:#111; text-decoration:none;">Terms of
+                Service</a>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-footer">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Work With Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Free Demo</a></li>
+                    <li><a href="#">Press Conferences</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="tweet-box">
+                <span class="handle">@maxwellapp</span>
+                We’ve just announced new feature that would help you increase your experience of using Maxwell!
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
