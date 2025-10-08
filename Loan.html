@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            color: #1e5f1c;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 24px 32px;
+            border-bottom: 1px solid #ebebeb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 21px;
+            font-weight: 700;
+            color: #1e5f1c;
+        }
+
+        .logo i {
+            margin-right: 8px;
+        }
+
+        .form-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1e5f1c;
+        }
+
+        .form-container {
+            padding: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #1e5f1c;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid#1e5f1c;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #1e5f1c;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-hint {
+            font-size: 14px;
+            color: #1e5f1c;
+            margin-top: 6px;
+        }
+
+        .submit-btn {
+            background-color: #1e5f1c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: white;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #1e5f1c;
+            margin: 24px 0;
+        }
+
+        .image-upload {
+            border: 2px dashed #1e5f1c;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .image-upload:hover {
+            border-color: #b0b0b0;
+        }
+
+        .image-upload i {
+            font-size: 48px;
+            color: #717171;
+            margin-bottom: 16px;
+        }
+
+        .image-upload-text {
+            font-size: 16px;
+            color: #222222;
+            font-weight: 500;
+        }
+
+        .image-upload-subtext {
+            font-size: 14px;
+            color: #717171;
+            margin-top: 4px;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .amenity-checkbox {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .header,
+            .form-container {
+                padding: 20px;
+            }
+
+            .amenities-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+
+                <span>APPLY FOR A LOAN</span>
+            </div>
+            <div class="form-title">Loan application details
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label class="form-label" for="borrower-name">Borrower name</label>
+                <input type="text" id="borrower-name" class="form-input" placeholder="Jane Doe">
+                <div class="form-hint">Full legal name of the borrower</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="loan-amount">Loan amount</label>
+                <input type="number" id="loan-amount" class="form-input" placeholder="120000">
+                <div class="form-hint">Enter the desired amount in KWACHA</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="loan-term">Loan term (months)</label>
+                <input type="number" id="loan-term" class="form-input" placeholder="12">
+                <div class="form-hint">Term length in months (e.g. 12, 24, 36)</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="interest-rate">Interest rate (annual %)</label>
+                <input type="number" step="0.01" id="interest-rate" class="form-input" placeholder="12.5">
+                <div class="form-hint">Annual interest rate as a percentage (e.g. 12.5)</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="loan-purpose">Purpose of loan</label>
+                <textarea id="loan-purpose" class="form-textarea"
+                    placeholder="Describe what the loan will be used for (e.g., home renovation, business expansion, debt consolidation)"></textarea>
+                <div class="form-hint">A short explanation helps speed up review</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form-group">
+                <label class="form-label">Supporting documents</label>
+                <div class="image-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div class="image-upload-text">Upload ID, payslips, or collateral docs</div>
+                    <div class="image-upload-subtext">Drag and drop or click to upload (PDF, JPG). In a real app these
+                        would be sent to the server.</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form-group">
+                <label class="form-label">Loan options</label>
+                <div class="amenities-grid">
+                    <div class="amenity-item">
+                        <input type="checkbox" id="secured" class="amenity-checkbox">
+                        <label for="secured">Secured (requires collateral)</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="unsecured" class="amenity-checkbox">
+                        <label for="unsecured">Unsecured</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="salary-backed" class="amenity-checkbox">
+                        <label for="salary-backed">Salary-backed</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="business-loan" class="amenity-checkbox">
+                        <label for="business-loan">Business loan</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="mortgage" class="amenity-checkbox">
+                        <label for="mortgage">Mortgage</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="emergency" class="amenity-checkbox">
+                        <label for="emergency">Emergency loan</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <button class="submit-btn">Submit application</button>
+        </div>
+    </div>
+
+    <script>
+        // Add some basic interactivity
+        document.querySelector('.image-upload').addEventListener('click', function () {
+            alert('Document upload placeholder — in a real application files would be selected and sent to the server.');
+        });
+
+        document.querySelector('.submit-btn').addEventListener('click', function () {
+            const name = document.getElementById('borrower-name').value.trim();
+            const amount = parseFloat(document.getElementById('loan-amount').value);
+            const term = parseInt(document.getElementById('loan-term').value, 10);
+            const rate = parseFloat(document.getElementById('interest-rate').value);
+
+            if (!name) {
+                alert('Please enter the borrower name');
+                return;
+            }
+            if (isNaN(amount) || amount <= 0) {
+                alert('Please enter a valid loan amount');
+                return;
+            }
+            if (isNaN(term) || term <= 0) {
+                alert('Please enter a valid loan term (in months)');
+                return;
+            }
+            if (isNaN(rate) || rate < 0) {
+                alert('Please enter a valid interest rate');
+                return;
+            }
+
+            const purpose = document.getElementById('loan-purpose').value.trim() || 'Not provided';
+
+            // Collect selected loan options
+            const options = Array.from(document.querySelectorAll('.amenity-checkbox'))
+                .filter(cb => cb.checked)
+                .map(cb => document.querySelector(`label[for="${cb.id}"]`).innerText);
+
+            const summary = `Borrower: ${name}\nAmount: ${amount.toLocaleString()} KWACHA\nTerm: ${term} months\nRate: ${rate}%\nPurpose: ${purpose}\nOptions: ${options.length ? options.join(', ') : 'None'}`;
+
+            // In a real application we'd POST this data to the server. For now show a confirmation.
+            alert('Application ready to submit:\n\n' + summary);
+        });
+    </script>
+</body>
+
+</html>
